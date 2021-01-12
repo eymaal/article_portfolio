@@ -57,8 +57,8 @@ public class ArticleController {
 	 * @param id
 	 * @return article mapped to given title
 	 */
-	@GetMapping(path="/{title}")
-	public @ResponseBody Optional<Article> getArticleByTitle(@PathVariable String title) {
+	@GetMapping(path="/article/title")
+	public @ResponseBody Optional<Article> getArticleByTitle(@RequestParam String title) {
 		return service.getArticleByTitle(title);
 	}
 	
