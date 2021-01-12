@@ -1,4 +1,4 @@
-package com.portfolio.backend.article;
+package com.portfolio.backend;
 
 import java.util.Optional;
 
