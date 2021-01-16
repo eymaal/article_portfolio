@@ -1,6 +1,6 @@
 package com.portfolio.backend.article;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +26,9 @@ public class ArticleService {
 			Article article = new Article();
 			article.setAuthor(author);
 			article.setTitle(title);
-			article.setDate(Date.valueOf(date));
+			article.setDate(LocalDate.parse(date));
 			article.setPublication(publication);
-			article.setContent(content);
+			article.setContent(content.replaceAll("\n", "<br/>"));
 			articleRepository.save(article);
 			
 			return true;
