@@ -2,8 +2,6 @@ package com.portfolio.backend.article;
 
 import java.util.Optional;
 
-import org.apache.logging.log4j.simple.SimpleLogger;
-import org.apache.logging.log4j.simple.SimpleLoggerContextFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

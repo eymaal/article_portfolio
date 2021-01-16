@@ -1,6 +1,6 @@
 package com.portfolio.backend.article;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import javax.persistence.GenerationType;
 
 @Entity
@@ -22,10 +20,9 @@ public class Article {
 	private int id;
 	private String title;
 	private String author;
-	private Date date;
+	private LocalDate date;
 	private String publication;
 	private int visibility = 1;
-	@Lob
-	@Column(length = 50000)
+	@Column(length = 50000, columnDefinition = "TEXT")
 	private String content;
 }
